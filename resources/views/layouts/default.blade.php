@@ -63,8 +63,8 @@
         <div class="@yield('container-style')">
             <p>
                 &copy; {{ date('Y') }} {{ config('wizard.copyright', 'AICODE.CC') }}
-                <a class="fa fa-github wz-version" target="_blank" href="https://github.com/mylxsw/wizard">
-                    v{{ config('wizard.version', '1') }}</a>
+                <!--<a class="fa fa-github wz-version" target="_blank" href="https://github.com/wanngsanchao/wizard">
+                    v{{ config('wizard.version', '1') }}</a>-->
                 {!! statistics() !!}
             </p>
         </div>
