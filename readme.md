@@ -246,6 +246,7 @@ composer 会在在项目目录中创建 **vender** 目录，其中包含了项�
     docker run -it --rm my-wizard php artisan migrate
 
 
+
 ### 初始化
 
 安装完成后，Wizard项目就可以通过浏览器访问了，接下来需要访问注册页面创建初始用户 
@@ -254,6 +255,12 @@ composer 会在在项目目录中创建 **vender** 目录，其中包含了项�
 
 在系统中注册的第一个用户为默认管理员角色。
 
+### 数据备份
+```
+主要是两部分的数据:
+1.docker中/webroot/storage/app/public/* 主要用于存放图片用户等相关的数据
+2.数据库中的wizard_2库中的数据 主要用于存放具体的文本和用户信息 数据迁移的话就把wizard_2给备份出来，在另外一个苦衷导入进去
+```
 ## FAQ
 
 1. 如果在执行数据库迁移（`php artisan migrate`）的时候，报错 `SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes`
